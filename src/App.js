@@ -1,23 +1,28 @@
-import logo from './logo.svg';
-import './App.css';
+import { Route, Routes } from "react-router-dom";
+import LoginPage from "./components/LoginPage";
+import Main from "./components/Main";
+import MovieSearch from "./components/MovieSearch";
+import MoviesRows from "./components/MoviesRows";
+import Navbar from "./components/Navbar";
+import { useSelector } from "react-redux/es/hooks/useSelector";
+import MyAccount from "./components/MyAccount";
 
 function App() {
+
+  const {isLoggedin} = useSelector(state => state.customReducer)
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className="w-full h-full">
+      {isLoggedin ? <Navbar/> : <></> }
+      <Routes >
+        <Route path='/' element={<LoginPage/>}/>
+        <Route path="/home" element={<Main/>}/>
+        <Route path="/home/moviesSearch" element={<MovieSearch/>} />
+        <Route path="/home/moviesRows" element={<MoviesRows/>}/>   
+        <Route path="/home/myAccount" element={<MyAccount/>}/> 
+      </Routes>
+
+      
     </div>
   );
 }

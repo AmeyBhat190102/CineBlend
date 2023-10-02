@@ -1,6 +1,7 @@
 import React, { useState } from 'react'
 import axios from 'axios'
 import MovieCard from './MovieCard'
+
 const MovieSearch = () => {
   const [search,setSearch] = useState("")
   const [movies,setMovies] = useState([])

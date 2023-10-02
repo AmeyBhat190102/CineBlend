@@ -6,10 +6,11 @@ import MoviesRows from "./components/MoviesRows";
 import Navbar from "./components/Navbar";
 import { useSelector } from "react-redux/es/hooks/useSelector";
 import MyAccount from "./components/MyAccount";
-
+import MovieDetailsCard from "./components/MovieDetailsCard";
 function App() {
 
   const {isLoggedin} = useSelector(state => state.customReducer)
+
 
   return (
     <div className="w-full h-full">
@@ -20,6 +21,7 @@ function App() {
         <Route path="/home/moviesSearch" element={<MovieSearch/>} />
         <Route path="/home/moviesRows" element={<MoviesRows/>}/>   
         <Route path="/home/myAccount" element={<MyAccount/>}/> 
+        <Route path="/home/movieDetails/:movieID" element={<MovieDetailsCard/>}/>
       </Routes>
 
       

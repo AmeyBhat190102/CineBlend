@@ -141,6 +141,7 @@ const MyAccount = () => {
                   <div className='flex'>
                   <input type='text' placeholder='Enter New Password' onChange={(e)=>{setNewPassword(e.target.value)}} className='m-2 text-black w-1/2 px-4 py-2 bg-gray-100 rounded border focus:outline-none focus:border-red-600'></input>
                   <input type='text' placeholder='Confirm New Password' onChange={(e)=>{setConfirmPassword(e.target.value)}} className='m-2 text-black w-1/2 px-4 py-2 bg-gray-100 rounded border focus:outline-none focus:border-red-600'></input>
+                  <input type='text' placeholder='Enter The Code'  className='m-2 text-black px-4 py-2 bg-gray-100 rounded border focus:outline-none focus:border-red-600'></input>
                   </div>
                   <button onClick={()=>{checkNewPassword()}} className='bg-red-500 hover:bg-red-700 text-white font-bold p-1 sm:p-2 rounded-full text-base sm:text-lg w-full'>Set Password</button>
                 </>
@@ -159,6 +160,7 @@ const MyAccount = () => {
                   <div className='flex'>
                     <input type='text' placeholder='Enter New Username' onChange={(e)=>{setNewusername(e.target.value)}} className=' m-2 text-black w-1/2 px-4 py-2 bg-gray-100 rounded border focus:outline-none focus:border-red-600'></input>
                     <input type='text' placeholder='Confirm New Username' onChange={(e)=>{setConfirmUsername(e.target.value)}} className=' m-2 text-black w-1/2 px-4 py-2 bg-gray-100 rounded border focus:outline-none focus:border-red-600'></input>
+                    <input type='text' placeholder='Enter The Code'  className='m-2 text-black px-4 py-2 bg-gray-100 rounded border focus:outline-none focus:border-red-600'></input>
                   </div>
                   <button onClick={()=>{checkNewUsername()}} className='bg-red-500 hover:bg-red-700 text-white font-bold p-2 sm:p-3 rounded-full text-base sm:text-lg w-full'>Set Username</button>
                 </>

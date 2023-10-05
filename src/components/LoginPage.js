@@ -153,7 +153,6 @@ const LoginPage = () => {
   const sendOTP = async () => {
 
     if (isUserPresent(userData)){
-
       const number = "+91".concat(mobile)
       await fetch('https://cine-blend-backend.vercel.app/api/sendOtp', {
         method: 'POST',

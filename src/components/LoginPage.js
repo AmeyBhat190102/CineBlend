@@ -67,7 +67,7 @@ const LoginPage = () => {
   const navigate = useNavigate()
 
   const getUsers = async () => {
-    await fetch("https://cine-blend-backend.vercel.app/api/getAllUsers", { method: "GET" })
+    await fetch("https://cine-blend-backend-deployment.vercel.app//api/getAllUsers", { method: "GET" })
       .then((response) => {
         if (response.ok) {
           return response.json()
@@ -118,7 +118,7 @@ const LoginPage = () => {
                         username:username , gender:gender} 
     if (password === confirmPassword) {
       try {
-        const response = await fetch('https://cine-blend-backend.vercel.app/api/addNewUser', {
+        const response = await fetch('https://cine-blend-backend-deployment.vercel.app//api/addNewUser', {
           method: 'POST',
           headers: {
             'Content-Type': 'application/json',
@@ -154,7 +154,7 @@ const LoginPage = () => {
 
     if (isUserPresent(userData)){
       const number = "+91".concat(mobile)
-      await fetch('https://cine-blend-backend.vercel.app/api/sendOtp', {
+      await fetch('https://cine-blend-backend-deployment.vercel.app//api/sendOtp', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
@@ -175,7 +175,7 @@ const LoginPage = () => {
 
   const verifyOTP = async () => {
     const number = "+91".concat(mobile)
-    await fetch('https://cine-blend-backend.vercel.app/api/verifyOtp', {
+    await fetch('https://cine-blend-backend-deployment.vercel.app//api/verifyOtp', {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',

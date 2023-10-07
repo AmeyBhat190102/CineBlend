@@ -16,7 +16,7 @@ const LoginWithOTP = () => {
   const sendOTP = async () => {
     if (mobile === phoneNumber) {
       const number = "+91".concat(phoneNumber);
-      await fetch("https://cine-blend-backend.vercel.app/api/sendOtp", {
+      await fetch("https://cine-blend-backend-deployment.vercel.app//api/sendOtp", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
@@ -37,7 +37,7 @@ const LoginWithOTP = () => {
 
   const verifyOTP = async () => {
     const number = "+91".concat(phoneNumber);
-    await fetch("https://cine-blend-backend.vercel.app/api/verifyOtp", {
+    await fetch("https://cine-blend-backend-deployment.vercel.app//api/verifyOtp", {
       method: "POST",
       headers: {
         "Content-Type": "application/json",

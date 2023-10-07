@@ -24,7 +24,7 @@ const MyAccount = () => {
   const checkNewPassword = async () => {
     if(newPassword===confirmPassword){
       try{
-        const url = `https://cine-blend-backend.vercel.app/api/updatePassword` 
+        const url = `https://cine-blend-backend-deployment.vercel.app//api/updatePassword` 
         const response = await fetch(url, {
           method: 'PUT',
           headers: {
@@ -52,7 +52,7 @@ const MyAccount = () => {
   const checkNewUsername = async () => {
     if(newUsername===confirmUsername){
       try{
-      const url = `https://cine-blend-backend.vercel.app/api/updateUsername` 
+      const url = `https://cine-blend-backend-deployment.vercel.app//api/updateUsername` 
         const response = await fetch(url, {
           method: 'PUT',
           headers: {
@@ -84,7 +84,7 @@ const MyAccount = () => {
       alert("You Chose Current MemberShip")
     }else{
       try{
-        const url = `https://cine-blend-backend.vercel.app/api/updateMembership` 
+        const url = `https://cine-blend-backend-deployment.vercel.app//api/updateMembership` 
           const response = await fetch(url, {
             method: 'PUT',
             headers: {
